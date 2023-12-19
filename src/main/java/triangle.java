@@ -4,17 +4,18 @@ public class triangle extends figure{
     public triangle(double[] sides){
         System.arraycopy(sides, 0, this.sides, 0, 3);
         view = 0;
-        area = 0;
-        perimeter = 0;
     }
     public int getView() {
         return view;
     }
-    public void workTriangle(){
+    public void workTriangle()throws Exception {
         double p;
         perimeter = sides[0] + sides[1] + sides[2];
         p = perimeter / 2;
         area = Math.sqrt(p * (p - sides[0]) * (p - sides[1]) * (p - sides[2]));
+        if (area == 0) {
+            throw new Exception ("Такого треугольника не существует");
+        }
         if (sides[0] == sides[1] && sides[1] == sides[2])
             view = 1;
         else if (sides[0] == sides[1] || sides[1] == sides[2] || sides[0] == sides[2])

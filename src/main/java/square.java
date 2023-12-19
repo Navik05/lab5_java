@@ -4,8 +4,6 @@ public class square extends figure{
     public square(double a){
         this.a = a;
         diagonal = 0;
-        area = 0;
-        perimeter = 0;
     }
     public double getDiagonal() {
         return diagonal;

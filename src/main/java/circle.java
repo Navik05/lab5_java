@@ -4,8 +4,6 @@ public class circle extends figure{
     public circle(double r){
         this.r = r;
         d = 0;
-        area = 0;
-        perimeter = 0;
     }
     public double getD() {
         return d;
